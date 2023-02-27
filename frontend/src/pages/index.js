@@ -48,16 +48,16 @@ const Dashboard = ({ app }) => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
-        {app.length > 0 && (
+        {/* {app.length > 0 && ( */}
           <>
-            {app.map(app => (
+            {app.slice(0).reverse().map(app => (
               <Grid item xs={12} md={4} key={app._id}>
                 <Trophy name={app?.name} desc={app?.desc} slug={app?.slug} content={app?.content} />
                 {/* <li >{app?.name}</li> */}
               </Grid>
             ))}
           </>
-        )}
+        {/* )} */}
       </Grid>
     </ApexChartWrapper>
   )
