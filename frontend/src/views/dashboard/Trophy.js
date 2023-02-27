@@ -1,3 +1,5 @@
+import Link from 'next/dist/client/link'
+
 // ** MUI Imports
 import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
@@ -21,7 +23,7 @@ const TrophyImg = styled('img')({
   position: 'absolute'
 })
 
-const Trophy = () => {
+const Trophy = (props) => {
   // ** Hook
   const theme = useTheme()
   const imageSrc = theme.palette.mode === 'light' ? 'triangle-light.png' : 'triangle-dark.png'
@@ -29,7 +31,7 @@ const Trophy = () => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-        <Typography variant='h6'>Calculators</Typography>
+        <Typography variant='h6'>{props.name}</Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
           Calculator
         </Typography>
@@ -37,7 +39,9 @@ const Trophy = () => {
           $42.8k
         </Typography>
         <Button size='small' variant='contained'>
+          <Link href={`/app/${props.slug.current}`} sx={{ color: 'primary.main' }}>
           View Sales
+          </Link>
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
         <TrophyImg alt='trophy' src='/images/misc/trophy.png' />
