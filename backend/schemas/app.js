@@ -25,6 +25,12 @@ export default {
       description: 'Make it catchy',
     },
     {
+      title: 'TypeOfCalculator',
+      name: 'typCal',
+      type: 'string',
+      description: 'Make related calculator',
+    },
+    {
       title: 'Content', 
       name: 'content',
       type: 'array', 
