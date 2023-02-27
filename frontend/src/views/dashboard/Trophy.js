@@ -31,16 +31,17 @@ const Trophy = (props) => {
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-        <Typography variant='h6'>{props.name}</Typography>
+      <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
+          {props.name}
+        </Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
           {props.desc}
         </Typography>
-        <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          {/* $42.8k */}
-        </Typography>
+
+        <Typography variant='h6' sx={{my:4}}>{props.typCal}</Typography>
         <Button size='small' variant='contained'>
           <Link href={`/app/${props.slug.current}`} sx={{ color: 'primary.main' }}>
-          View Sales
+          Click Here
           </Link>
         </Button>
         <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
