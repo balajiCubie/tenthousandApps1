@@ -33,10 +33,10 @@ const Trophy = (props) => {
       <CardContent>
         <Typography variant='h6'>{props.name}</Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          Calculator
+          {props.desc}
         </Typography>
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
-          $42.8k
+          {/* $42.8k */}
         </Typography>
         <Button size='small' variant='contained'>
           <Link href={`/app/${props.slug.current}`} sx={{ color: 'primary.main' }}>
