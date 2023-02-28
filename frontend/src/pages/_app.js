@@ -1,8 +1,8 @@
 // ** Next Imports
 import Head from 'next/head'
 import { Router } from 'next/router'
+import 'bootstrap/dist/css/bootstrap.css'
 
-// ** Loader Import
 import NProgress from 'nprogress'
 
 // ** Emotion Imports

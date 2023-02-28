@@ -28,6 +28,8 @@ const Trophy = (props) => {
   const theme = useTheme()
   const imageSrc = theme.palette.mode === 'light' ? 'triangle-light.png' : 'triangle-dark.png'
 
+
+
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
@@ -40,12 +42,12 @@ const Trophy = (props) => {
 
         <Typography variant='h6' sx={{my:4}}>{props.typCal}</Typography>
         <Button size='small' variant='contained'>
-          <Link href={`/app/${props.slug.current}`} sx={{ color: 'primary.main' }}>
+          <Link href={`/${props.url}/${props.slug?.current}`} sx={{ color: 'primary.main' }}>
           Click Here
           </Link>
         </Button>
-        <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
-        <TrophyImg alt='trophy' src='/images/misc/trophy.png' />
+        <TriangleImg alt='triangle background'     src={`/images/misc/${imageSrc}`} />
+        <TrophyImg alt='trophy' sx={{ p: 2 }}  src='/images/misc/trophy.png' />
       </CardContent>
     </Card>
   )

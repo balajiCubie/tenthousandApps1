@@ -21,9 +21,24 @@ const navigation = () => {
       sectionTitle: 'Apps'
     },
     {
-      title: 'Calculators',
+      title: 'Finance Calculators',
       icon: AccountCogOutline,
-      path: '/calculators'
+      path: '/finance-calculators'
+    },
+    {
+      title: 'Health Calculators',
+      icon: AccountCogOutline,
+      path: '/health-calculators'
+    },
+    {
+      title: 'Math Calculators',
+      icon: AccountCogOutline,
+      path: '/math-calculators'
+    },
+    {
+      title: 'Others Calculators',
+      icon: AccountCogOutline,
+      path: '/others-calculators'
     },
   ]
 }

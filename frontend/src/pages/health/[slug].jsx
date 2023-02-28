@@ -13,7 +13,7 @@ const client = createClient({
 export async function getServerSideProps(context) {
   const slug = context.params.slug;
 
-  const post = await client.fetch(`*[_type == "app" && slug.current == $slug][0]`, {slug})
+  const post = await client.fetch(`*[_type == "health" && slug.current == $slug][0]`, {slug})
 
   return {
     props: {

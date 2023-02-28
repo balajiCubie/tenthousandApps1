@@ -23,7 +23,7 @@ code[class*='language-'] {
   padding: 0;
 }
 
-a {
+button a {
   color: white !important;
   text-decoration: none !important;
 }
