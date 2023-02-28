@@ -31,16 +31,51 @@ export default {
       description: 'Make related calculator',
     },
     {
+      title: 'Iframe URL',
+      name: 'iframe',
+      type: 'url',
+    },
+    {
       title: 'Content', 
       name: 'content',
       type: 'array', 
       of: [{type: 'block'}]
     },
     {
-      title: 'Related',
-      name: 'Related',
-      type: 'array',
-      of: [{type: 'url'}]
+      title: 'Reference 1',
+      name: 'reference1',
+      type: 'reference',
+      to: [{type: 'health'}]
+    },
+    {
+      title: 'Reference 2',
+      name: 'reference2',
+      type: 'reference',
+      to: [{type: 'health'}]
+    },
+    {
+      title: 'Reference 3',
+      name: 'reference3',
+      type: 'reference',
+      to: [{type: 'health'}]
+    },
+    {
+      title: 'Reference 4',
+      name: 'reference4',
+      type: 'reference',
+      to: [{type: 'health'}]
+    },
+    {
+      title: 'Reference 5',
+      name: 'reference5',
+      type: 'reference',
+      to: [{type: 'health'}]
+    },
+    {
+      title: 'Reference 6',
+      name: 'reference6',
+      type: 'reference',
+      to: [{type: 'health'}]
     }
   ],
 }

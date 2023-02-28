@@ -27,3 +27,14 @@ button a {
   color: white !important;
   text-decoration: none !important;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+iframe {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
