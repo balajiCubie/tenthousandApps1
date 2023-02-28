@@ -19,6 +19,16 @@ export default {
       },
     },
     {
+      title: 'Enter Link',
+      name: 'url',
+      type: 'url',
+    },
+    {
+      title: 'Image URL',
+      name: 'img',
+      type: 'url',
+    },
+    {
       title: 'Description',
       name: 'desc',
       type: 'string',

@@ -23,31 +23,38 @@ const TrophyImg = styled('img')({
   position: 'absolute'
 })
 
-const Trophy = (props) => {
+const Trophy = props => {
   // ** Hook
   const theme = useTheme()
   const imageSrc = theme.palette.mode === 'light' ? 'triangle-light.png' : 'triangle-dark.png'
 
-
-
   return (
     <Card sx={{ position: 'relative' }}>
       <CardContent>
-      <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
+        <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
           {props.name}
         </Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
           {props.desc}
         </Typography>
 
-        <Typography variant='h6' sx={{my:4}}>{props.typCal}</Typography>
+        <Typography variant='h6' sx={{ my: 4 }}>
+          {props.typCal}
+        </Typography>
         <Button size='small' variant='contained'>
-          <Link href={`/${props.url}/${props.slug?.current}`} sx={{ color: 'primary.main' }}>
-          Click Here
-          </Link>
+          {props.weburl ? (
+            <Link href={`${props.weburl}`} sx={{ color: 'primary.main' }}>
+              Open
+            </Link>
+          ) : (
+            <Link href={`/${props.url}/${props.slug?.current}`} sx={{ color: 'primary.main' }}>
+              Open
+            </Link>
+          )}
         </Button>
-        <TriangleImg alt='triangle background'     src={`/images/misc/${imageSrc}`} />
-        <TrophyImg alt='trophy' sx={{ p: 2 }}  src='/images/misc/trophy.png' />
+        {/* <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} /> */}
+        {/* <TrophyImg alt={props.name} sx={{ p: 2 }} src={props.img} />
+        <h1>{props.img}</h1> */}
       </CardContent>
     </Card>
   )

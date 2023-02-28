@@ -44,13 +44,13 @@ const ptComponents = {
 const slug = ({ post }) => {
 
 
-  const post_ref = client.fetch('*[_type == "math" && references(^._id)]{title}')
+  // const post_ref = client.fetch('*[_type == "math" && references(^._id)]{title}')
 
-  console.log(post_ref)
+  // console.log(post_ref)
 
-  console.log(post?.reference1._ref)
-  console.log(post?.reference2._ref)
-  console.log(post?.reference3._ref)
+  // console.log(post?.reference1._ref)
+  // console.log(post?.reference2._ref)
+  // console.log(post?.reference3._ref)
 
   return (
     <div>

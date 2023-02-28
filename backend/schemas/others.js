@@ -31,6 +31,11 @@ export default {
       description: 'Make related calculator',
     },
     {
+      title: 'Image URL',
+      name: 'img',
+      type: 'url',
+    },
+    {
       title: 'Iframe URL',
       name: 'iframe',
       type: 'url',
