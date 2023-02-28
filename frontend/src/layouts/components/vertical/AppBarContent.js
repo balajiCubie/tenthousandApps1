@@ -61,7 +61,7 @@ const AppBarContent = props => {
             />
           </Box>
         )} */}
-        <a className='btn btn-warning mx-3' href="https://cuvisoft.com">Donation</a>
+        <a className='btn btn-warning mx-3' href="https://cuvisoft.com">Sponsor</a>
         <a className='btn btn-warning mr-3' href="https://www.buymeacoffee.com/cuvisoft">Buy me a Coffee</a>
         <ModeToggler settings={settings} saveSettings={saveSettings} />
         <NotificationDropdown />
