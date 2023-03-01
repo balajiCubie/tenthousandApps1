@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PortableText } from '@portabletext/react';
 
 import Trophy from 'src/views/dashboard/Trophy'
@@ -44,19 +44,32 @@ const ptComponents = {
   }
 }
 
-const slug = ({ post }) => {
+const Slug = ({ post }) => {
+
+  const [load, setLoad] = useState(true)
+
   return (
     <div>
-    <h2 className='mt-5 text-center'>{post?.name}</h2>
-    <p className='text-center'>{post?.typCal}</p>
+      <h2 className='mt-5 text-center'>{post?.name}</h2>
+      <p className='text-center'>{post?.typCal}</p>
 
-    <div className='container m-auto'>
-      <iframe
-        src={post?.iframe}
-        className='w-100 mt-3'
-        style={{ height: 'auto', minHeight: '775px' }}
-        scrolling='no'
-      ></iframe>
+      <div className='container m-auto text-center'>
+        {load == true ? (
+          <div className='my-5'>
+            <div className='spinner-border' role='status'>
+              <span className='visually-hidden'>Loading...</span>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        <iframe
+          src={post?.iframe}
+          className='w-100 mt-3'
+          style={{ height: load == true ? '0px' : '775px' }}
+          scrolling='no'
+          onLoad={() => setLoad(false)}
+        ></iframe>
     </div>
 
     {/* <p className='container m-auto'>{post?.content}</p> */}
@@ -92,4 +105,4 @@ const slug = ({ post }) => {
   )
 }
 
-export default slug
+export default Slug
