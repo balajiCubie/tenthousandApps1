@@ -21,6 +21,11 @@ const navigation = () => {
       sectionTitle: 'Apps'
     },
     {
+      title: 'Calculators',
+      icon: AccountCogOutline,
+      path: '/calculators'
+    },
+    {
       title: 'Finance Calculators',
       icon: AccountCogOutline,
       path: '/finance-calculators'

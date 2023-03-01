@@ -1,6 +1,9 @@
 import React from 'react'
 import { PortableText } from '@portabletext/react'
 
+import Trophy from 'src/views/dashboard/Trophy'
+import Grid from '@mui/material/Grid'
+
 // Sanity
 import { createClient } from 'next-sanity'
 
@@ -62,7 +65,29 @@ const slug = ({ post }) => {
         <PortableText value={post?.content} components={ptComponents} />
       </div>
 
-      <div className='my-3'>Related</div>
+      <div className='p-5 my-3'>
+        <div className='bold my-5'>Related</div>
+        <Grid container spacing={6}>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference1} desc={post?.descReference1} weburl={[post?.urlReference1]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference2} desc={post?.descReference2} weburl={[post?.urlReference2]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference3} desc={post?.descReference3} weburl={[post?.urlReference3]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference4} desc={post?.descReference4} weburl={[post?.urlReference4]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference5} desc={post?.descReference5} weburl={[post?.urlReference5]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference6} desc={post?.descReference6} weburl={[post?.urlReference6]} />
+          </Grid>
+        </Grid>
+      </div>
     </div>
   )
 }

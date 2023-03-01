@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PortableText } from '@portabletext/react'
+
+import Trophy from 'src/views/dashboard/Trophy'
+import Grid from '@mui/material/Grid'
 
 // Sanity
 import { createClient } from 'next-sanity'
@@ -32,26 +35,16 @@ const ptComponents = {
 
       return (
         <img
-        alt={value.alt || ' '}
-        loading='lazy'
+          alt={value.alt || ' '}
+          loading='lazy'
           src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
-        )
+      )
     }
   }
 }
 
-const slug = ({ post }) => {
-
-
-  // const post_ref = client.fetch('*[_type == "math" && references(^._id)]{title}')
-
-  // console.log(post_ref)
-
-  // console.log(post?.reference1._ref)
-  // console.log(post?.reference2._ref)
-  // console.log(post?.reference3._ref)
-
+const Slug = ({ post }) => {
   return (
     <div>
       <h2 className='mt-5 text-center'>{post?.name}</h2>
@@ -72,9 +65,31 @@ const slug = ({ post }) => {
         <PortableText value={post?.content} components={ptComponents} />
       </div>
 
-      <div className='my-3'>Related</div>
+      <div className='p-5 my-3'>
+        <div className='bold my-5'>Related</div>
+        <Grid container spacing={6}>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference1} desc={post?.descReference1} weburl={[post?.urlReference1]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference2} desc={post?.descReference2} weburl={[post?.urlReference2]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference3} desc={post?.descReference3} weburl={[post?.urlReference3]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference4} desc={post?.descReference4} weburl={[post?.urlReference4]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference5} desc={post?.descReference5} weburl={[post?.urlReference5]} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Trophy name={post?.titleReference6} desc={post?.descReference6} weburl={[post?.urlReference6]} />
+          </Grid>
+        </Grid>
+      </div>
     </div>
   )
 }
 
-export default slug
+export default Slug
