@@ -23,6 +23,7 @@ export default {
       name: 'desc',
       type: 'string',
       description: 'Make it catchy',
+      
     },
     {
       title: 'TypeOfCalculator',
@@ -33,7 +34,7 @@ export default {
     {
       title: 'Image URL',
       name: 'img',
-      type: 'url',
+      type: 'string',
     },
     {
       title: 'Iframe URL',

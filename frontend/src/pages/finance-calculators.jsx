@@ -53,7 +53,7 @@ const Calculators = ({ app }) => {
           <>
             {app.slice(0).reverse().map(app => (
               <Grid item xs={12} md={4} key={app._id}>
-                <Trophy name={app?.name} desc={app?.desc} slug={app?.slug} content={app?.content} typCal={app?.typCal} url={"finance"}/>
+                <Trophy name={app?.name} desc={app?.desc} slug={app?.slug} content={app?.content} typCal={app?.typCal} url={"finance"} img={app?.img} />
                 {/* <li >{app?.name}</li> */}
               </Grid>
             ))}

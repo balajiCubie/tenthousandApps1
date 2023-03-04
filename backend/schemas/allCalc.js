@@ -26,7 +26,7 @@ export default {
     {
       title: 'Image URL',
       name: 'img',
-      type: 'url',
+      type: 'string',
     },
     {
       title: 'Description',

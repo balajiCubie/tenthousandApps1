@@ -17,9 +17,9 @@ const TriangleImg = styled('img')({
 
 // Styled component for the trophy image
 const TrophyImg = styled('img')({
-  right: 36,
-  bottom: 20,
-  height: 98,
+  right: 3,
+  bottom: 2,
+  height: 65,
   position: 'absolute'
 })
 
@@ -35,7 +35,7 @@ const Trophy = props => {
           {props.name}
         </Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          {props.desc.substring(0, 225)}...
+          {props.desc}...
         </Typography>
 
         <Typography variant='h6' sx={{ my: 4 }}>
@@ -52,9 +52,16 @@ const Trophy = props => {
             </Link>
           )}
         </Button>
-        {/* <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} /> */}
-        {/* <TrophyImg alt={props.name} sx={{ p: 2 }} src={props.img} />
-        <h1>{props.img}</h1> */}
+        <br></br>
+        {props.img ? (
+           <TrophyImg  sx={{ m: 2 }} src={props.img} />
+          ) : (
+             <TrophyImg alt='cuvisoft' sx={{ m: 2 }}  src={`/images/pages/auth-v1-tree-2.png`} />
+          )}
+      {/* <TriangleImg alt='triangle background' sx={{ m: 2 }}  src={`/images/pages/auth-v1-tree-2.png`} /> */}
+        {/* <TrophyImg  sx={{ m: 2 }} src={props.img} /> */}
+
+        {/* <h1>{props.img}</h1> */}
       </CardContent>
     </Card>
   )
