@@ -34,9 +34,18 @@ const Trophy = props => {
         <Typography variant='h5' sx={{ my: 4, color: 'primary.main' }}>
           {props.name}
         </Typography>
-        <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          {props.desc}...
+        {props.desc ? (
+           <Typography variant='body2'  sx={{ letterSpacing: '0.25px' }}>
+           {props.desc.substring(0, 250)}...
+         </Typography>
+          ) : (
+            <Typography variant='body2'  sx={{ letterSpacing: '0.25px' }}>
+          Updating Soon...
         </Typography>
+          )}
+        {/* <Typography variant='body2'  sx={{ letterSpacing: '0.25px' }}>
+          {props.desc}...
+        </Typography> */}
 
         <Typography variant='h6' sx={{ my: 4 }}>
           {props.typCal}
