@@ -19,7 +19,7 @@ const TriangleImg = styled('img')({
 const TrophyImg = styled('img')({
   right: 3,
   bottom: 2,
-  height: 65,
+  height: 100,
   position: 'absolute'
 })
 
