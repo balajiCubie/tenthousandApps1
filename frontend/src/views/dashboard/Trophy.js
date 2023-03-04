@@ -35,7 +35,7 @@ const Trophy = props => {
           {props.name}
         </Typography>
         <Typography variant='body2' sx={{ letterSpacing: '0.25px' }}>
-          {props.desc}
+          {props.desc.substring(0, 225)}...
         </Typography>
 
         <Typography variant='h6' sx={{ my: 4 }}>
