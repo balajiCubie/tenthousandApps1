@@ -1,7 +1,7 @@
 export default {
-  name: 'math',
+  name: '2Dgeometry',
   type: 'document',
-  title: 'math',
+  title: '2Dgeometry',
   fields: [
     {
       name: 'name',
