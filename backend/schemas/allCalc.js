@@ -19,6 +19,12 @@ export default {
       },
     },
     {
+      title: 'TypeOfCalculator',
+      name: 'typCal',
+      type: 'string',
+      description: 'Make related calculator',
+    },
+    {
       title: 'Enter Link',
       name: 'url',
       type: 'string',
