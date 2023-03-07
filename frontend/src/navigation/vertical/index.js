@@ -17,11 +17,11 @@ const navigation = () => {
     {
       sectionTitle: 'Apps'
     },
-    // {
-    //   title: 'Calculators',
-    //   icon: CalculatorIcon,
-    //   path: '/calculators'
-    // },
+    {
+      title: 'Calculators',
+      icon: CalculatorIcon,
+      path: '/calculators'
+    },
     {
       title: 'Finance Calculators',
       icon: CurrencyInrIcon,
